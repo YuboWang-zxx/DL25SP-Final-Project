@@ -1,0 +1,8 @@
+normal loss: 0.32467275857925415
+wall loss: 0.741540789604187
+wall_other loss: 2.796499729156494
+expert loss: 1.6679620742797852
+
+# # params: 3631680
+# training command to replicate your submitted model: run train1 train2, train3.py in order, the weights are stored in stage3.pth
+

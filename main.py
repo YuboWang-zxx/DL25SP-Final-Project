@@ -1,7 +1,8 @@
 from dataset import create_wall_dataloader
 from evaluator import ProbingEvaluator
 import torch
-from models import MockModel
+#from models import MockModel
+from models import JEPAModel
 import glob
 
 
@@ -73,11 +74,12 @@ def load_expert_data(device):
 
     return probe_train_expert_ds, probe_val_expert_ds
 
-
+from models import JEPAModel
 def load_model():
     """Load or initialize the model."""
-    # TODO: Replace MockModel with your trained model
-    model = MockModel()
+    # TODO: Replace MockModel with your trained model # DONE
+    model = JEPAModel()
+    model.load_state_dict(torch.load('stage3.pth'))
     return model
 
 
